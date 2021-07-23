@@ -1,16 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
 
-// import LottieView from 'lottie-react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
-// import plantAnimation from './assets/animations/plant.json';
-import SplashScreen from './components/Animation';
+import Routes from './routes/routes';
 
 const App: React.FC = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <SplashScreen />
-    </View>
+    <NavigationContainer>
+      <Routes />
+      <StatusBar backgroundColor="#b8e47e" />
+    </NavigationContainer>
   );
 };
 
