@@ -1,11 +1,16 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+
+import Routes from './routes/routes';
 
 const App: React.FC = () => {
   return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      <Routes />
+      <StatusBar backgroundColor="#b8e47e" />
+    </NavigationContainer>
   );
 };
 
