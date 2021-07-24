@@ -12,15 +12,15 @@ const Home: React.FC = () => (
     </S.ContainerSection>
     <S.Banner source={Banner} resizeMode="contain" />
 
-    <S.Description>
-      Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você
-      sempre que precisar.
-    </S.Description>
+    <S.ContainerSection>
+      <S.Description>
+        Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você
+        sempre que precisar.
+      </S.Description>
+    </S.ContainerSection>
 
     <S.ButtonSubmit>
-      <S.ButtonSubmitText>
-        <S.Arrow source={Arrow} />
-      </S.ButtonSubmitText>
+      <S.Arrow source={Arrow} />
     </S.ButtonSubmit>
   </S.Container>
 );
