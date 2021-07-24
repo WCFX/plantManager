@@ -1,14 +1,21 @@
 import styled from 'styled-components/native';
 
+import { xColors } from '../../styles/colors';
+import { xFonts } from '../../styles/fonts';
+
 export const Container = styled.View`
   flex: 1;
   align-items: center;
-  justify-content: center;
-  background-color: #83d71586;
+  background-color: ${xColors.green};
 `;
 
 export const Title = styled.Text`
   font-size: 28px;
-  font-weight: bold;
-  color: #222;
+  color: ${xColors.green_dark};
+  font-family: ${xFonts.Jost600};
+`;
+
+export const TitleColor = styled.Text`
+  color: ${xColors.white};
+  font-family: ${xFonts.Jost600};
 `;

@@ -3,13 +3,15 @@ import { StatusBar } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 
+import { xColors } from './styles/colors';
+
 import Routes from './routes/routes';
 
 const App: React.FC = () => {
   return (
     <NavigationContainer>
       <Routes />
-      <StatusBar backgroundColor="#b8e47e" />
+      <StatusBar backgroundColor={`${xColors.green}`} />
     </NavigationContainer>
   );
 };

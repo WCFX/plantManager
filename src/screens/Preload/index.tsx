@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Text } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
@@ -23,7 +24,7 @@ const Preload: React.FC = () => {
     };
     setTimeout(() => {
       checkToken();
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
@@ -35,7 +36,9 @@ const Preload: React.FC = () => {
         loop
         autoPlay
       />
-      <S.Title>Plant Manager</S.Title>
+      <S.Title>
+        <S.TitleColor>Plant</S.TitleColor>Manager
+      </S.Title>
     </S.Container>
   );
 };
