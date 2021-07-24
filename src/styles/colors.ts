@@ -16,5 +16,3 @@ export const xColors = {
 
   red: '#E83F5B',
 };
-
-export default {};

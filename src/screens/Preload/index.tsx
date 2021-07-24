@@ -19,12 +19,12 @@ const Preload: React.FC = () => {
       if (token) {
         // Token
       } else {
-        // navigation.navigate('Home');
+        navigation.navigate('Home');
       }
     };
     setTimeout(() => {
       checkToken();
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (

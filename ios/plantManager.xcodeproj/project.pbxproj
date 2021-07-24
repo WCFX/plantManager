@@ -42,6 +42,8 @@
 		572E91E3627344A1A5426658 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78F3802F1CFB4566AB9D12A2 /* Octicons.ttf */; };
 		14A482DC1A1D4A56AF576AB7 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C89EAFF426A84983B8BC47A0 /* SimpleLineIcons.ttf */; };
 		65B28DC00A3A4C32AFC45935 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F0A694310B142A5BE175ED0 /* Zocial.ttf */; };
+		79A1EFEC3ADB495EB1FC3880 /* Jost-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C2ACD20EB98403BBE933825 /* Jost-Regular.ttf */; };
+		CCFBE405CE8042E987D5F888 /* Jost-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FF27D2063C7430194CD29EC /* Jost-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		78F3802F1CFB4566AB9D12A2 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C89EAFF426A84983B8BC47A0 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7F0A694310B142A5BE175ED0 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1C2ACD20EB98403BBE933825 /* Jost-Regular.ttf */ = {isa = PBXFileReference; name = "Jost-Regular.ttf"; path = "../src/assets/fonts/Jost-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3FF27D2063C7430194CD29EC /* Jost-SemiBold.ttf */ = {isa = PBXFileReference; name = "Jost-SemiBold.ttf"; path = "../src/assets/fonts/Jost-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 				78F3802F1CFB4566AB9D12A2 /* Octicons.ttf */,
 				C89EAFF426A84983B8BC47A0 /* SimpleLineIcons.ttf */,
 				7F0A694310B142A5BE175ED0 /* Zocial.ttf */,
+				1C2ACD20EB98403BBE933825 /* Jost-Regular.ttf */,
+				3FF27D2063C7430194CD29EC /* Jost-SemiBold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -343,6 +349,8 @@
 				572E91E3627344A1A5426658 /* Octicons.ttf in Resources */,
 				14A482DC1A1D4A56AF576AB7 /* SimpleLineIcons.ttf in Resources */,
 				65B28DC00A3A4C32AFC45935 /* Zocial.ttf in Resources */,
+				79A1EFEC3ADB495EB1FC3880 /* Jost-Regular.ttf in Resources */,
+				CCFBE405CE8042E987D5F888 /* Jost-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
