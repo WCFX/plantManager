@@ -4,11 +4,15 @@ import { useNavigation } from '@react-navigation/native';
 
 import * as S from './styles';
 
-import Arrow from '../../assets/images/arrow.png';
 import Banner from '../../assets/images/watering.png';
+import { ButtonSubmit } from '../../components/ButtonSubmit';
 
 const Home: React.FC = () => {
-  const navigation = useNavigation();
+  const { navigate } = useNavigation();
+
+  function handleNavigateToTheNextPage() {
+    navigate('Quiz');
+  }
 
   return (
     <S.Container>
@@ -24,9 +28,7 @@ const Home: React.FC = () => {
         </S.Description>
       </S.ContainerSection>
 
-      <S.ButtonSubmit onPress={() => navigation.navigate('Quiz')}>
-        <S.Arrow source={Arrow} />
-      </S.ButtonSubmit>
+      <ButtonSubmit onPress={handleNavigateToTheNextPage} title=">" />
     </S.Container>
   );
 };

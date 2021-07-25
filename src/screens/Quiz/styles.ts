@@ -1,3 +1,5 @@
+import { StyleSheet } from 'react-native';
+
 import styled from 'styled-components/native';
 
 import { xColors } from '../../styles/colors';
@@ -26,9 +28,17 @@ export const Title = styled.Text`
 `;
 
 export const Input = styled.TextInput`
-  margin-top: 25px;
+  margin: 25px 0;
   width: 100%;
   border-bottom-width: 1px;
+  border-bottom-color: ${xColors.green_light};
   text-align: center;
   font-size: 22px;
+`;
+
+export const ContainerButton = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 50px;
 `;
