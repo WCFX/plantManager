@@ -5,7 +5,11 @@ import * as S from './styles';
 const Quiz: React.FC = () => {
   return (
     <S.Container>
-      <S.Title>Chegou no Quiz COISA LINDA</S.Title>
+      <S.Form>
+        <S.Emoticon>🤓</S.Emoticon>
+        <S.Title>Como podemos chamar você?</S.Title>
+        <S.Input placeholder="Digite seu nome" />
+      </S.Form>
     </S.Container>
   );
 };
