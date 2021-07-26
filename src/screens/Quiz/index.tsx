@@ -29,7 +29,7 @@ const Quiz: React.FC = () => {
   return (
     <S.Container>
       <S.Form behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-        <S.Emoticon>🤓</S.Emoticon>
+        <S.Emoticon>{isFilled ? '🤩' : '🧐'}</S.Emoticon>
         <S.Title>Como podemos chamar você?</S.Title>
         <S.Input
           style={
@@ -39,6 +39,7 @@ const Quiz: React.FC = () => {
           onFocus={handleInputFocus}
           placeholder="Digite seu nome"
           onChangeText={handleInputChange}
+          autoCapitalize="words"
         />
         <ButtonSubmit title="Continue" />
       </S.Form>
