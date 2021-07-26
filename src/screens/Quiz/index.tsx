@@ -1,6 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
-import { Platform } from 'react-native';
+import React, { useState } from 'react';
+import { Keyboard, Platform, TouchableWithoutFeedback } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -35,23 +34,28 @@ const Quiz: React.FC = () => {
   }
 
   return (
-    <S.Container>
-      <S.Form behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-        <S.Emoticon>{isFilled ? '🤩' : '🧐'}</S.Emoticon>
-        <S.Title>Como podemos chamar você?</S.Title>
-        <S.Input
-          style={
-            (isFocused || isFilled) && { borderBottomColor: xColors.green }
-          }
-          onBlur={handleInputBlur}
-          onFocus={handleInputFocus}
-          placeholder="Digite seu nome"
-          onChangeText={handleInputChange}
-          autoCapitalize="words"
-        />
-        <ButtonSubmit onPress={handleNavigateToTheNextPage} title="Continue" />
-      </S.Form>
-    </S.Container>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <S.Container>
+        <S.Form behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+          <S.Emoticon>{isFilled ? '🤩' : '🧐'}</S.Emoticon>
+          <S.Title>Como podemos chamar você?</S.Title>
+          <S.Input
+            style={
+              (isFocused || isFilled) && { borderBottomColor: xColors.green }
+            }
+            onBlur={handleInputBlur}
+            onFocus={handleInputFocus}
+            placeholder="Digite seu nome"
+            onChangeText={handleInputChange}
+            autoCapitalize="words"
+          />
+          <ButtonSubmit
+            onPress={handleNavigateToTheNextPage}
+            title="Continue"
+          />
+        </S.Form>
+      </S.Container>
+    </TouchableWithoutFeedback>
   );
 };
 

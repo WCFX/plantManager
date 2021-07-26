@@ -8,7 +8,8 @@ const Resume: React.FC = () => {
   return (
     <S.Container>
       <S.ContainerContent>
-        <S.Emoticon>🧐</S.Emoticon>
+        <S.Emoticon>👏😆</S.Emoticon>
+        <S.Title>Prontinho!!</S.Title>
         <S.Description>
           Agora vamos começar a cuidar das suas plantinhas com muito cuidado
         </S.Description>
