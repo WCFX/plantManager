@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { useNavigation } from '@react-navigation/native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 import * as S from './styles';
 
 import Banner from '../../assets/images/watering.png';
-import { ButtonSubmit } from '../../components/ButtonSubmit';
 
 const Home: React.FC = () => {
   const { navigate } = useNavigation();
@@ -28,7 +28,11 @@ const Home: React.FC = () => {
         </S.Description>
       </S.ContainerSection>
 
-      <ButtonSubmit onPress={handleNavigateToTheNextPage} title=">" />
+      <S.ButtonSubmit onPress={handleNavigateToTheNextPage}>
+        <S.ButtonSubmitText>
+          <AntDesign name="right" size={24} color="#FFF" />
+        </S.ButtonSubmitText>
+      </S.ButtonSubmit>
     </S.Container>
   );
 };

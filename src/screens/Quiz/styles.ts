@@ -5,9 +5,10 @@ import { xColors, xFonts } from '../../styles';
 export const Container = styled.View`
   flex: 1;
   align-items: center;
+  justify-content: center;
 `;
 
-export const Form = styled.View`
+export const Form = styled.KeyboardAvoidingView`
   margin-top: 50px;
   width: 250px;
   align-items: center;
@@ -15,6 +16,7 @@ export const Form = styled.View`
 
 export const Emoticon = styled.Text`
   text-align: center;
+  font-size: 52px;
 `;
 
 export const Title = styled.Text`
@@ -30,7 +32,9 @@ export const Input = styled.TextInput`
   border-bottom-width: 1px;
   border-bottom-color: ${xColors.green_light};
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
+  font-family: ${xFonts.Roboto700};
+  color: ${xColors.green_dark};
 `;
 
 export const ContainerButton = styled.View`

@@ -7,7 +7,7 @@ export const Container = styled.View`
   align-items: center;
 `;
 export const ContainerSection = styled.View`
-  margin-top: 50px;
+  margin-top: 20px;
   width: 300px;
   height: 150px;
   align-items: center;
@@ -20,9 +20,7 @@ export const Title = styled.Text`
   color: ${xColors.body_dark};
 `;
 
-export const Banner = styled.Image`
-  height: ${HEIGHT};
-`;
+export const Banner = styled.Image``;
 
 export const Arrow = styled.Image``;
 
@@ -41,3 +39,5 @@ export const ButtonSubmit = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
 `;
+
+export const ButtonSubmitText = styled.Text``;
