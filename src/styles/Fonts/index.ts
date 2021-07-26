@@ -1,4 +1,4 @@
-export const xFonts = {
+const xFonts = {
   Montserrat700: 'Montserrat-Bold',
   Montserrat500: 'Montserrat-Medium',
   Montserrat400: 'Montserrat-Regular',
@@ -14,3 +14,5 @@ export const xFonts = {
   Jost400: 'Jost-Regular',
   Jost600: 'Jost-SemiBold',
 };
+
+export default xFonts;

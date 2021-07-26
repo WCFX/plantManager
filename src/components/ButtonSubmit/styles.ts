@@ -1,12 +1,11 @@
 import styled from 'styled-components/native';
 
-import { xColors } from '../../styles/colors';
-import { xFonts } from '../../styles/fonts';
+import { xColors, xFonts } from '../../styles';
 
 export const ButtonSubmit = styled.TouchableOpacity`
   padding: 15px 25px;
   background: ${xColors.green};
-  border: none;
+  border: 3px solid ${xColors.green_dark};
   border-radius: 12px;
   align-items: center;
   justify-content: center;
@@ -17,6 +16,6 @@ export const ButtonSubmitText = styled.Text`
   color: ${xColors.white};
   text-align: center;
   align-self: center;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   font-family: ${xFonts.Roboto500};
 `;

@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
 
-import { xColors } from '../../styles/colors';
-import { xFonts } from '../../styles/fonts';
+import { HEIGHT, xColors, xFonts } from '../../styles';
 
 export const Container = styled.View`
   flex: 1;
@@ -21,7 +20,9 @@ export const Title = styled.Text`
   color: ${xColors.body_dark};
 `;
 
-export const Banner = styled.Image``;
+export const Banner = styled.Image`
+  height: ${HEIGHT};
+`;
 
 export const Arrow = styled.Image``;
 

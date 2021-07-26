@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 
-import { xColors } from './styles/colors';
+import { xColors } from './styles';
 
 import Routes from './routes/routes';
 
