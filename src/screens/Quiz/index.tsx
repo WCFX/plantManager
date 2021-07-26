@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { Platform } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 import { xColors } from '../../styles';
 import * as S from './styles';
 
@@ -11,6 +13,12 @@ const Quiz: React.FC = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
   const [name, setName] = useState<string>();
+
+  const { navigate } = useNavigation();
+
+  function handleNavigateToTheNextPage() {
+    navigate('Resume');
+  }
 
   function handleInputBlur() {
     setIsFocused(false);
@@ -41,7 +49,7 @@ const Quiz: React.FC = () => {
           onChangeText={handleInputChange}
           autoCapitalize="words"
         />
-        <ButtonSubmit title="Continue" />
+        <ButtonSubmit onPress={handleNavigateToTheNextPage} title="Continue" />
       </S.Form>
     </S.Container>
   );

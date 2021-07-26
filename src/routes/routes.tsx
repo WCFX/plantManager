@@ -15,6 +15,7 @@ const Routes: React.FC = () => {
       <Screen name="Preload" component={View.Preload} />
       <Screen name="Home" component={View.Home} />
       <Screen name="Quiz" component={View.Quiz} />
+      <Screen name="Resume" component={View.Resume} />
     </Navigator>
   );
 };
