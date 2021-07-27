@@ -1,14 +1,10 @@
-// import { StyleSheet } from 'react-native';
-
 import styled from 'styled-components/native';
 
 import { xColors, xFonts } from '../../styles';
 
-// export const styles = StyleSheet.create({
-//   ButtonList: {},
-// });
-
-export const Container = styled.View``;
+export const Container = styled.View`
+  flex: 1;
+`;
 
 export const ContainerHeader = styled.View`
   padding: 25px;
@@ -28,4 +24,11 @@ export const Description = styled.Text`
   font-size: 18px;
   color: ${xColors.body_dark};
   font-family: ${xFonts.Nunito500};
+`;
+
+export const ContainerPlants = styled.View`
+  flex: 1;
+  padding: 0 32px;
+  justify-content: center;
+  align-items: center;
 `;
