@@ -2,7 +2,6 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 
 import * as S from './styles';
-import { styles } from './styles';
 
 import { HeaderComponent, HorizontalButton } from '../../components';
 
