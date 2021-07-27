@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { xColors } from '../../styles';
 import * as S from './styles';
 
-import { ButtonSubmit } from '../../components/ButtonSubmit';
+import { ButtonSubmit } from '../../components';
 
 const Quiz: React.FC = () => {
   const [isFocused, setIsFocused] = useState(false);

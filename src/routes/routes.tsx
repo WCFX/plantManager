@@ -8,14 +8,12 @@ const { Screen, Navigator } = createStackNavigator();
 
 const Routes: React.FC = () => {
   return (
-    <Navigator
-      initialRouteName="Preload"
-      screenOptions={{ headerShown: false }}
-    >
+    <Navigator initialRouteName="Resume" screenOptions={{ headerShown: false }}>
       <Screen name="Preload" component={View.Preload} />
       <Screen name="Home" component={View.Home} />
       <Screen name="Quiz" component={View.Quiz} />
       <Screen name="Resume" component={View.Resume} />
+      <Screen name="Main" component={View.Main} />
     </Navigator>
   );
 };

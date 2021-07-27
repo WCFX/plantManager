@@ -7,10 +7,12 @@ interface ButtonSubmitProps extends TouchableOpacityProps {
   title: string;
 }
 
-export const ButtonSubmit = ({ title, ...rest }: ButtonSubmitProps) => {
+const ButtonSubmit = ({ title, ...rest }: ButtonSubmitProps) => {
   return (
     <S.ButtonSubmit {...rest}>
       <S.ButtonSubmitText>{title}</S.ButtonSubmitText>
     </S.ButtonSubmit>
   );
 };
+
+export default ButtonSubmit;
