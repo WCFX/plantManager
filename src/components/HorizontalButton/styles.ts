@@ -11,6 +11,7 @@ export const Button = styled(RectButton)<{ active: boolean }>`
   justify-content: center;
   align-items: center;
   border-radius: 12px;
+  margin: 5px;
 `;
 
 export const ButtonText = styled.Text<{ active: boolean }>`

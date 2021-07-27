@@ -1,6 +1,12 @@
+// import { StyleSheet } from 'react-native';
+
 import styled from 'styled-components/native';
 
 import { xColors, xFonts } from '../../styles';
+
+// export const styles = StyleSheet.create({
+//   ButtonList: {},
+// });
 
 export const Container = styled.View``;
 
