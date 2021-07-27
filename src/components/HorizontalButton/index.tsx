@@ -16,8 +16,8 @@ const HorizontalButton = ({
   ...rest
 }: HorizontalButtonProps) => {
   return (
-    <S.Button {...rest}>
-      <S.ButtonText>{title}</S.ButtonText>
+    <S.Button active={active} {...rest}>
+      <S.ButtonText active={active}>{title}</S.ButtonText>
     </S.Button>
   );
 };

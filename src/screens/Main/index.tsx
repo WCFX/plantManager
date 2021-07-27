@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FlatList, View } from 'react-native';
 
 import * as S from './styles';
 
 import { HeaderComponent, HorizontalButton } from '../../components';
+import api from '../../server/api';
+
+interface EnvironmentsProps {
+  key: string;
+  title: string;
+  id: string;
+}
 
 const Main: React.FC = () => {
+  const [environments, setEnvironments] = useState<EnvironmentsProps[]>();
+
+  useEffect(() => {
+    async function fetchEnvironment() {
+      const { data } = await api.get('plants_environments');
+      setEnvironments([
+        {
+          key: 'all',
+          title: 'Todos',
+        },
+        ...data,
+      ]);
+    }
+
+    fetchEnvironment();
+  }, []);
+
   return (
     <S.Container>
       <S.ContainerHeader>
@@ -15,10 +39,10 @@ const Main: React.FC = () => {
           <S.Description>você quer colocar a sua planta</S.Description>
         </S.ContainerInfo>
         <FlatList
-          data={[1, 2, 3, 4, 5]}
+          data={environments}
           renderItem={({ item }) => (
-            <View key={item}>
-              <HorizontalButton active title="Black" />
+            <View key={item.id}>
+              <HorizontalButton title={item.title} />
             </View>
           )}
           horizontal
