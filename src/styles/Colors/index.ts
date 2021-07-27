@@ -1,13 +1,13 @@
 const xColors = {
   green: '#32B768',
   green_dark: '#2B7A4B',
-  green_light: '#DAF2E4',
+  green_light: '#CBF0DD',
 
   heading: '#52665A',
   body_dark: '#738078',
   body_light: '#AAB2AD',
 
-  shape: '#F0F0F0',
+  shape: '#D8D8D8',
   white: '#FFFFFF',
   gray: '#CFCFCF',
 
