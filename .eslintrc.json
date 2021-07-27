@@ -41,6 +41,7 @@
       "react-hooks/exhaustive-deps": "warn",
       "react/jsx-one-expression-per-line": "off",
       "react/jsx-props-no-spreading": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
       "react/jsx-curly-newline": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
       "@typescript-eslint/camelcase": "off",

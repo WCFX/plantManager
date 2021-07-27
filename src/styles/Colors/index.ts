@@ -1,4 +1,4 @@
-export const xColors = {
+const xColors = {
   green: '#32B768',
   green_dark: '#2B7A4B',
   green_light: '#DAF2E4',
@@ -16,3 +16,5 @@ export const xColors = {
 
   red: '#E83F5B',
 };
+
+export default xColors;
