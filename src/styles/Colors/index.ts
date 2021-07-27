@@ -7,7 +7,7 @@ const xColors = {
   body_dark: '#738078',
   body_light: '#AAB2AD',
 
-  shape: '#F0F0F0',
+  shape: '#D8D8D8',
   white: '#FFFFFF',
   gray: '#CFCFCF',
 
