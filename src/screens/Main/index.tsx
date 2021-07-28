@@ -39,7 +39,6 @@ export function Main() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [loadingMore, setLoadingMore] = useState(false);
-  const [loadedAll, setLoadedAll] = useState(false);
 
   function handleEnvironmentSelected(environment: string) {
     setEnvironmentSelected(environment);
@@ -50,7 +49,7 @@ export function Main() {
     const filtered = plants?.filter((plant) =>
       plant.environments.includes(environment),
     );
-    setFilteredPlants(filtered);
+    return setFilteredPlants(filtered);
   }
 
   async function fetchPlants() {
@@ -71,6 +70,8 @@ export function Main() {
 
     setLoading(false);
     setLoadingMore(false);
+
+    return data;
   }
 
   function handleFetchMore(distance: number) {
