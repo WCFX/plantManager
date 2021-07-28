@@ -17,7 +17,7 @@ const Quiz: React.FC = () => {
 
   const { navigate } = useNavigation();
 
-  function handleNavigateToTheNextPage() {
+  async function handleNavigateToTheNextPage() {
     if (!name) {
       showMessage({
         message: 'Você precisa colocar o seu nome',
@@ -27,7 +27,7 @@ const Quiz: React.FC = () => {
         type: 'danger',
       });
     } else {
-      AsyncStorage.setItem('@plantmanager:user', name);
+      await AsyncStorage.setItem('@plantmanager:user', name);
       navigate('Resume');
     }
   }
