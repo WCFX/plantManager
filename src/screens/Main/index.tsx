@@ -6,6 +6,7 @@ import * as S from './styles';
 import {
   HeaderComponent,
   HorizontalButton,
+  Loading,
   PlantCardPrimary,
 } from '../../components';
 import api from '../../server/api';
@@ -34,6 +35,7 @@ export function Main() {
   const [plants, setPlants] = useState<PlantsProps[]>();
   const [filteredPlants, setFilteredPlants] = useState<PlantsProps[]>();
   const [environmentSelected, setEnvironmentSelected] = useState('all');
+  const [loading, setLoading] = useState(true);
 
   function handleEnvironmentSelected(environment: string) {
     setEnvironmentSelected(environment);
@@ -68,10 +70,14 @@ export function Main() {
     async function fetchPlants() {
       const { data } = await api.get('plants?_sort=title&_order=asc');
       setPlants(data);
+      setLoading(false);
     }
     fetchPlants();
   }, []);
 
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <S.Container>
       <S.ContainerHeader>
