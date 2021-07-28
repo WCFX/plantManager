@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useNavigation } from '@react-navigation/native';
 import { RectButtonProps } from 'react-native-gesture-handler';
 import { SvgUri } from 'react-native-svg';
 
@@ -13,8 +14,14 @@ interface ContainerPlantsProps extends RectButtonProps {
 }
 
 const PlantCardPrimary = ({ data, ...rest }: ContainerPlantsProps) => {
+  const { navigate } = useNavigation();
+
+  function handleNavigateToTheNextPage() {
+    navigate('PlantDetail');
+  }
+
   return (
-    <S.Plant {...rest}>
+    <S.Plant onPress={handleNavigateToTheNextPage} {...rest}>
       <SvgUri uri={data.photo} width={100} height={100} />
       <S.PlantText>{data.name}</S.PlantText>
     </S.Plant>

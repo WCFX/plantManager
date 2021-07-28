@@ -17,6 +17,18 @@ const Routes: React.FC = () => {
       <Screen name="Quiz" component={View.Quiz} />
       <Screen name="Resume" component={View.Resume} />
       <Screen name="Main" component={View.Main} />
+      <Screen
+        options={{
+          headerShown: true,
+          title: '',
+          headerStyle: {
+            backgroundColor: 'transparent',
+            shadowColor: 'transparent',
+          },
+        }}
+        name="PlantDetail"
+        component={View.PlantDetail}
+      />
     </Navigator>
   );
 };
