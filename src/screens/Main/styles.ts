@@ -28,7 +28,6 @@ export const Description = styled.Text`
 
 export const ContainerPlants = styled.View`
   flex: 1;
-  padding: 0 32px;
   justify-content: center;
   align-items: center;
 `;
