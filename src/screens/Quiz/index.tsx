@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Keyboard, Platform, TouchableWithoutFeedback } from 'react-native';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
+import { showMessage, hideMessage } from 'react-native-flash-message';
 
 import { xColors } from '../../styles';
 import * as S from './styles';
@@ -15,8 +17,19 @@ const Quiz: React.FC = () => {
 
   const { navigate } = useNavigation();
 
-  function handleNavigateToTheNextPage() {
-    navigate('Resume');
+  async function handleNavigateToTheNextPage() {
+    if (!name) {
+      showMessage({
+        message: 'Você precisa colocar o seu nome',
+        duration: 3000,
+        description:
+          'Não seja timido(a), queremos conhecer você. Coloque seu nome!',
+        type: 'danger',
+      });
+    } else {
+      await AsyncStorage.setItem('@plantmanager:user', name);
+      navigate('Resume');
+    }
   }
 
   function handleInputBlur() {
