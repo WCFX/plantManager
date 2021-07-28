@@ -23,6 +23,8 @@ const PlantDetail: React.FC = () => {
           Escolha o melhor horário para ser lembrado
         </S.CalendarText>
       </S.SectionTwo>
+
+      <S.Title>Hello World</S.Title>
     </S.Container>
   );
 };
