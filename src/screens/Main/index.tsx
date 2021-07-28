@@ -114,6 +114,7 @@ export function Main() {
         </S.ContainerInfo>
         <FlatList
           data={environments}
+          keyExtractor={(item) => item.key.toString()}
           renderItem={({ item }) => (
             <View key={item.id}>
               <HorizontalButton
@@ -130,11 +131,8 @@ export function Main() {
       <S.ContainerPlants>
         <FlatList
           data={filteredPlants}
-          renderItem={({ item }) => (
-            <View key={item.id}>
-              <PlantCardPrimary data={item} />
-            </View>
-          )}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={({ item }) => <PlantCardPrimary data={item} />}
           showsVerticalScrollIndicator={false}
           numColumns={2}
           onEndReachedThreshold={0.1}
