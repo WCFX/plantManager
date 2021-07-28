@@ -2,6 +2,7 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
+import FlashMessage from 'react-native-flash-message';
 
 import { xColors } from './styles';
 
@@ -12,6 +13,7 @@ const App: React.FC = () => {
     <NavigationContainer>
       <Routes />
       <StatusBar backgroundColor={`${xColors.green}`} />
+      <FlashMessage position="top" />
     </NavigationContainer>
   );
 };

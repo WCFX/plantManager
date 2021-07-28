@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Keyboard, Platform, TouchableWithoutFeedback } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
+import { showMessage, hideMessage } from 'react-native-flash-message';
 
 import { xColors } from '../../styles';
 import * as S from './styles';
@@ -16,7 +17,12 @@ const Quiz: React.FC = () => {
   const { navigate } = useNavigation();
 
   function handleNavigateToTheNextPage() {
-    navigate('Resume');
+    showMessage({
+      message: 'Hello World',
+      description: 'This is our second message',
+      type: 'success',
+    });
+    // navigate('Resume');
   }
 
   function handleInputBlur() {
