@@ -2,16 +2,15 @@ import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
+import { xColors } from '../styles';
+
 import * as View from '../screens/index';
 
 const { Screen, Navigator } = createStackNavigator();
 
 const Routes: React.FC = () => {
   return (
-    <Navigator
-      initialRouteName="PlantDetail"
-      screenOptions={{ headerShown: false }}
-    >
+    <Navigator initialRouteName="Main" screenOptions={{ headerShown: false }}>
       <Screen name="Preload" component={View.Preload} />
       <Screen name="Home" component={View.Home} />
       <Screen name="Quiz" component={View.Quiz} />
@@ -22,7 +21,7 @@ const Routes: React.FC = () => {
           headerShown: true,
           title: '',
           headerStyle: {
-            backgroundColor: 'transparent',
+            backgroundColor: `${xColors.blue_light}`,
             shadowColor: 'transparent',
           },
         }}

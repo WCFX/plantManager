@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, View } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 import { xColors } from '../../styles';
 import * as S from './styles';
 
@@ -39,6 +41,12 @@ export function Main() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [loadingMore, setLoadingMore] = useState(false);
+
+  const { navigate } = useNavigation();
+
+  function handleNavigateToTheNextPage(plant: PlantsProps) {
+    navigate('PlantDetail', { plant });
+  }
 
   function handleEnvironmentSelected(environment: string) {
     setEnvironmentSelected(environment);
@@ -133,7 +141,12 @@ export function Main() {
         <FlatList
           data={filteredPlants}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => <PlantCardPrimary data={item} />}
+          renderItem={({ item }) => (
+            <PlantCardPrimary
+              onPress={() => handleNavigateToTheNextPage(item)}
+              data={item}
+            />
+          )}
           showsVerticalScrollIndicator={false}
           numColumns={2}
           onEndReachedThreshold={0.1}

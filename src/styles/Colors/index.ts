@@ -10,8 +10,9 @@ const xColors = {
   shape: '#D8D8D8',
   white: '#FFFFFF',
   gray: '#CFCFCF',
-
+  gray_light: '#f2f2f2',
   blue: '#3D7199',
+  ocean: '#C5DEF191',
   blue_light: '#EBF6FF',
 
   red: '#E83F5B',
