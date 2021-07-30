@@ -27,8 +27,16 @@ const Quiz: React.FC = () => {
         type: 'danger',
       });
     } else {
-      await AsyncStorage.setItem('@plantmanager:user', name);
-      navigate('Resume');
+      try {
+        await AsyncStorage.setItem('@plantmanager:user', name);
+        navigate('Resume');
+      } catch {
+        showMessage({
+          message: 'Não foi possível salvar o nome do usuário',
+          duration: 3000,
+          type: 'warning',
+        });
+      }
     }
   }
 

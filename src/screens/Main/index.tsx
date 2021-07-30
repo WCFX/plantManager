@@ -12,6 +12,7 @@ import {
   Loading,
   PlantCardPrimary,
 } from '../../components';
+import { PlantProps } from '../../libs/storage';
 import api from '../../server/api';
 
 interface EnvironmentsProps {
@@ -20,23 +21,10 @@ interface EnvironmentsProps {
   id: string;
 }
 
-interface PlantsProps {
-  id: number;
-  name: string;
-  about: string;
-  photo: string;
-  water_tips: string;
-  environments: string[];
-  frequency: {
-    times: number;
-    repeat_every: string;
-  };
-}
-
 export function Main() {
   const [environments, setEnvironments] = useState<EnvironmentsProps[]>();
-  const [plants, setPlants] = useState<PlantsProps[]>();
-  const [filteredPlants, setFilteredPlants] = useState<PlantsProps[]>();
+  const [plants, setPlants] = useState<PlantProps[]>();
+  const [filteredPlants, setFilteredPlants] = useState<PlantProps[]>();
   const [environmentSelected, setEnvironmentSelected] = useState('all');
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -44,7 +32,7 @@ export function Main() {
 
   const { navigate } = useNavigation();
 
-  function handleNavigateToTheNextPage(plant: PlantsProps) {
+  function handleNavigateToTheNextPage(plant: PlantProps) {
     navigate('PlantDetail', { plant });
   }
 

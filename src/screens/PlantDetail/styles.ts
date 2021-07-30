@@ -54,18 +54,30 @@ export const CareMethod = styled.Text`
 
 export const SectionTwo = styled.View`
   flex: 2;
-  background-color: ${xColors.white};
+  background-color: ${xColors.blue_light};
   align-items: center;
   justify-content: space-between;
-  background-color: ${xColors.white};
 `;
 
-export const CalendarText = styled.Text``;
+export const DateTimePickerButton = styled.TouchableOpacity`
+  width: 80%;
+  border-radius: 18px;
+  align-items: center;
+  padding: 40px 0;
+  background-color: ${xColors.ocean};
+`;
+
+export const DateTimePickerButtonText = styled.Text`
+  font-family: ${xFonts.Jost400};
+  line-height: 24px;
+  color: ${xColors.blue};
+  font-size: 22px;
+`;
 
 export const RegisterPlant = styled(RectButton)<RectButtonProps>`
   width: 80%;
   padding: 20px;
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
   background-color: ${xColors.green};
   justify-content: center;
   align-items: center;
@@ -75,4 +87,7 @@ export const RegisterPlant = styled(RectButton)<RectButtonProps>`
 
 export const RegisterPlantText = styled.Text`
   font-size: 18px;
+  color: ${xColors.white};
+  font-family: ${xFonts.Jost400};
+  letter-spacing: 2px;
 `;
