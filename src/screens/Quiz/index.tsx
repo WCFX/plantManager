@@ -3,7 +3,7 @@ import { Keyboard, Platform, TouchableWithoutFeedback } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
-import { showMessage, hideMessage } from 'react-native-flash-message';
+import { showMessage } from 'react-native-flash-message';
 
 import { xColors } from '../../styles';
 import * as S from './styles';
